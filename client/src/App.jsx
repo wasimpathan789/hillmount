@@ -1,11 +1,11 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import Login from "./component/login/Login";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import RootLayout from "./RootLayout/RootLayout";
-import SignUp from "./component/login/SignUp";
+import Login from "./auth/Login";
+import SignUp from "./auth/SignUp";
+import Layout from "./component/layout/Layout";
+import Dashboard from "./pages/dashboard/Dashboard";
+import Teacher from "./pages/teacher/Teacher";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,9 +13,15 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<RootLayout />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/login/signup" element={<SignUp />} />
+        {/* <Route path="/s" element={<Login />} /> */}
+
+        <Route path="/" element={<Layout />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/teacher" element={<Teacher />} />
+        <Route path="/teacher" element={<Teacher />} />
+        <Route path="/teacher" element={<Teacher />} />
+
+        {/* <Route path="/" element={<SignUp />} /> */}
       </Routes>
     </BrowserRouter>
   );

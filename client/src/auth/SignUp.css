@@ -1,11 +1,12 @@
-.login {
+.signup {
   display: flex;
-  justify-content: flex-start;
-  align-items: self-start;
+  height: 100%;
+  background-color: red;
+  overflow: hidden;
 }
-.loginLeft {
-  width: 30%;
-  height: 99vh;
+.signupLeft {
+  /* width: 30%; */
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
@@ -24,7 +25,7 @@
   background: linear-gradient(to right, #237a57, #093028);
 }
 
-.loginLeft > h1 {
+.signupLeft > h1 {
   color: var(--primary);
   font-family: var(--poppinsFont);
   font-weight: 600;
@@ -32,7 +33,7 @@
   margin-bottom: 2rem;
   text-align: center;
 }
-.loginLeft > h5 {
+.signupLeft > h5 {
   color: var(--primary);
   font-family: var(--poppinsFont);
   font-weight: 400;
@@ -47,9 +48,12 @@
   align-items: center;
   height: 100px;
 }
-.SignUpButton > button {
+.SignUpButton > a {
   width: 70%;
   height: auto;
+}
+.SignUpButton > a > button {
+  width: 100%;
   padding: 12px 20px;
   background-color: var(--primary);
   border-radius: 25px;
@@ -57,7 +61,7 @@
   font-family: var(--poppinsFont);
   cursor: pointer;
 }
-.loginRight {
+.signupRight {
   width: 70%;
   height: 85vh;
   background-color: var(--primary);
@@ -83,30 +87,57 @@
   font-weight: 400;
 }
 
-.loginRight > h1 {
+.signupRight > h1 {
   font-family: var(--poppinsFont);
   font-size: 2.8rem;
   font-weight: 600;
-  margin-bottom: 40px;
-  margin-top: 100px;
+  margin-bottom: 10px;
+  margin-top: 60px;
 }
-.loginRight > h5 {
+.signupRight > h5 {
   font-size: 1.4rem;
   font-family: var(--leageFont);
   margin-bottom: 0px;
   font-weight: 500;
 }
-.loginForm {
+.signupForm {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  /* background-color: red; */
+
   padding: 30px 00px;
-  width: 70%;
-}
-.loginForm > input {
-  padding: 13px 15px;
   width: 100%;
+  overflow: hidden;
+}
+.SingUpOption {
+  width: 100%;
+  display: flex;
+}
+.SingUpOption > select {
+  border: 2px solid var(--pista);
+  border-radius: 15px;
+  height: 40px;
+  width: 200px;
+  position: relative;
+  background-color: transparent;
+  padding: 5px 20px;
+  color: var(--pista);
+  font-family: var(--poppinsFont);
+  font-size: 1rem;
+}
+.SingUpOption > select > option {
+  /* background-color: red; */
+  border: 10px solid green;
+  width: 500px !important;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  position: absolute;
+  padding: 20px;
+}
+.signupForm > input {
+  padding: 13px 15px;
+  /* width: 90%; */
   border-radius: 10px;
   font-family: var(--interFont);
   color: var(--primary);
@@ -114,8 +145,11 @@
   transition: all 0.3s ease-in;
   outline: none;
   color: var(--pista);
+  background-color: red;
+  width: auto;
 }
-.loginForm > input:focus {
+
+.signupForm > input:focus {
   border: 0.7px solid var(--primary);
   font-size: 0.99rem;
   transition: all 0.3s ease-in;
@@ -133,12 +167,12 @@
   color: var(--pista);
   font-family: var(--poppinsFont);
 }
-.loginButton {
+.signupButton {
   width: 100%;
   display: flex;
   justify-content: flex-start;
 }
-.loginButton > button {
+.signupButton > button {
   background: linear-gradient(to right, #237a57, #093028);
   width: 200px;
   height: auto;
@@ -150,9 +184,65 @@
   color: var(--primary);
 }
 
-@media screen and (max-width: 1024px) {
-  .loginLeft {
-    width: 300px;
+.signupLogin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.signupLogin > p {
+  color: blue;
+}
+@media screen and (max-width: 1080px) {
+  .signup {
     background-color: red;
+    height: 100%;
+  }
+  .signupLeft,
+  .signupRight {
+    height: 100vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .signup {
+    flex-direction: column;
+  }
+  .signupLeft {
+    height: 100%;
+    padding: 100px 20px;
+    display: none;
+  }
+  .signupRight {
+    padding: 30px 20px;
+    height: 100%;
+    width: fit-content;
+    width: 94%;
+  }
+  .signupRight > h1 {
+    font-family: var(--poppinsFont);
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .signup {
+    width: 100%;
+  }
+  .signupRight > h1 {
+    font-family: var(--poppinsFont);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 60px;
+  }
+  .signupRight {
+    width: fit-content;
+    width: 100%;
+    width: 99vw;
+  }
+  .signupForm > input {
+    padding: 13px 15px;
   }
 }

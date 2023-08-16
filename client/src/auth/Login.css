@@ -1,15 +1,17 @@
 .login {
   display: flex;
+  justify-content: flex-start;
+  align-items: self-start;
 }
 .loginLeft {
-  /* width: 30%; */
+  width: 30%;
   height: 99vh;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(90deg, #3f2b96 0%, #a8c0ff 100%);
+  /* background: linear-gradient(90deg, #3f2b96 0%, #a8c0ff 100%);
   background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
   background: linear-gradient(90deg, #1cb5e0 0%, #000851 100%);
   background: repeating-linear-gradient(to right, #ff0000, #0000ff);
@@ -19,7 +21,7 @@
 
   background: #093028;
   background: -webkit-linear-gradient(to right, #237a57, #093028);
-  background: linear-gradient(to right, #237a57, #093028);
+  background: linear-gradient(to right, #237a57, #093028); */
 }
 
 .loginLeft > h1 {
@@ -45,12 +47,9 @@
   align-items: center;
   height: 100px;
 }
-.SignUpButton > a {
+.SignUpButton > button {
   width: 70%;
   height: auto;
-}
-.SignUpButton > a > button {
-  width: 100%;
   padding: 12px 20px;
   background-color: var(--primary);
   border-radius: 25px;
@@ -105,28 +104,6 @@
   padding: 30px 00px;
   width: 70%;
 }
-.SingUpOption {
-  width: 100%;
-  display: flex;
-}
-.SingUpOption > select {
-  border: 2px solid red;
-  border-radius: 15px;
-  height: 40px;
-  width: 200px;
-  position: relative;
-  background-color: transparent;
-}
-.SingUpOption > select > option {
-  /* background-color: red; */
-  border: 10px solid green;
-  width: 500px !important;
-  height: 50px;
-  border-radius: 50%;
-  margin-bottom: 30px;
-  position: absolute;
-  padding: 20px;
-}
 .loginForm > input {
   padding: 13px 15px;
   width: 100%;
@@ -138,7 +115,6 @@
   outline: none;
   color: var(--pista);
 }
-
 .loginForm > input:focus {
   border: 0.7px solid var(--primary);
   font-size: 0.99rem;
@@ -172,4 +148,11 @@
   font-family: var(--poppinsFont);
   cursor: pointer;
   color: var(--primary);
+}
+
+@media screen and (max-width: 1024px) {
+  .loginLeft {
+    /* width: 300px; */
+    background-color: red;
+  }
 }

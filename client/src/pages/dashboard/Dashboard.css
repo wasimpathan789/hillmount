@@ -1,0 +1,6 @@
+.dashboard {
+  display: flex;
+  background-color: yellow;
+  gap: 20px;
+  padding: 30px;
+}

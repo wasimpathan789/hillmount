@@ -23,7 +23,7 @@
 :root {
   --primary: #f4fbf9;
   --pista: #237a57;
-  --secondary: #454545;
+  --secondary: #f97e00
   --lightgreen: #f4fbf9;
   --blue: #0000ff;
 
@@ -42,4 +42,10 @@ h5,
 h6 {
   padding: 0;
   margin: 0;
+}
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: auto;
 }
